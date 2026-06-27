@@ -1,23 +1,58 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700 900;
+  src: local('Playfair Display');
+}
+
 @layer base {
   html,
   body {
-    @apply bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
   }
 }
 
-@theme {
-  --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* LA sunset gradient backgrounds */
+.bg-la-gradient {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7c59f 30%, #e89ab5 60%, #c77dff 100%);
+}
 
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 0.6;
-      transform: scale(1.05);
-    }
-    50% {
-      opacity: 0.4;
-      transform: scale(1);
-    }
+.bg-la-sunset {
+  background: linear-gradient(180deg, #1a0a2e 0%, #2d1b69 25%, #e85d75 50%, #f4a261 75%, #e9c46a 100%);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 30%, #24243e 60%, #ff6b35 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #f4a261, #e85d75, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

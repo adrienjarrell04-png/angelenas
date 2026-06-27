@@ -7,5 +7,5 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 bun run build
-setsid nohup bun run start > /tmp/team-site.log 2>&1 < /dev/null &
+setsid nohup bun run start > server.log 2>&1 < /dev/null &
 echo "site published; serving on port 3000"

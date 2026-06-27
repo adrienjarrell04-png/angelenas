@@ -67,14 +67,11 @@ function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gray-900">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/la-sunset-dating.png"
-              alt="LA Sunset Dating"
-              className="object-cover w-full h-full opacity-60 scale-105 animate-pulse-slow"
-              style={{ animationDuration: '20s' }}
-            />
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0 hero-gradient">
+            <div className="absolute inset-0" style={{
+              background: 'radial-gradient(ellipse at 20% 30%, rgba(255,107,53,0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(199,125,255,0.2) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(244,162,97,0.15) 0%, transparent 50%)'
+            }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent"></div>
           </div>
           
@@ -128,7 +125,7 @@ function Home() {
         <section className="py-32 bg-white dark:bg-gray-950 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-24">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 dark:text-white tracking-tight">Built for the <span className="text-orange-600">310, 818, 213, and 562.</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 dark:text-white tracking-tight font-heading">Built for the <span className="text-orange-600">310, 818, 213, and 562.</span></h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Tired of matching with people visiting for the weekend? Angelena ensures your matches actually live here.</p>
             </div>
             
