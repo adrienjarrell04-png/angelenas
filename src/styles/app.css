@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    @apply bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
+  }
+}
+
+@theme {
+  --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1.05);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+  }
+}
